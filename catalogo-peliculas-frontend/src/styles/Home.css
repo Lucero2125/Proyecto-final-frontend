@@ -1,0 +1,159 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.home-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.home-header h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-crear {
+  background: var(--color-success);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  font-size: 1rem;
+}
+
+.btn-crear:hover {
+  background: #059669;
+}
+
+.filtros-container {
+  background: rgba(30, 41, 59, 0.8);
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(245, 158, 11, 0.2);
+}
+
+.filtro-input,
+.filtro-select,
+.filtro-input-small {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #334155;
+  background: #1e293b;
+  color: white;
+  font-size: 1rem;
+}
+
+.filtro-input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.filtro-select {
+  min-width: 200px;
+}
+
+.filtro-input-small {
+  width: 120px;
+}
+
+.filtro-input:focus,
+.filtro-select:focus,
+.filtro-input-small:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.btn-buscar {
+  background: var(--color-info);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-buscar:hover {
+  background: #2563eb;
+}
+
+.btn-limpiar {
+  background: #475569;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-limpiar:hover {
+  background: #64748b;
+}
+
+.loading-container,
+.error-container,
+.empty-container {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(245, 158, 11, 0.2);
+  border-top: 4px solid var(--color-primary);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-container button,
+.empty-container button {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .filtros-container {
+    flex-direction: column;
+  }
+
+  .peliculas-grid {
+    grid-template-columns: 1fr;
+  }
+}

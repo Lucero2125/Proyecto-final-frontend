@@ -1,0 +1,117 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.login-card {
+  background: rgba(30, 41, 59, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 450px;
+  width: 100%;
+  border: 2px solid rgba(245, 158, 11, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.login-header h1 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-header p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background: #1e293b;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+.login-error {
+background: rgba(239, 68, 68, 0.2);
+border: 2px solid var(--color-danger);
+color: #fecaca;
+padding: 1rem;
+border-radius: 10px;
+font-size: 0.95rem;
+text-align: center;
+}
+.login-button {
+background: linear-gradient(135deg, var(--color-primary) 0%, #ea580c 100%);
+color: white;
+padding: 1rem;
+border-radius: 10px;
+font-size: 1.1rem;
+font-weight: 700;
+box-shadow: var(--shadow-md);
+margin-top: 1rem;
+}
+.login-button:hover {
+box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+.login-footer {
+margin-top: 2rem;
+padding-top: 2rem;
+border-top: 2px solid #334155;
+text-align: center;
+color: #94a3b8;
+font-size: 0.9rem;
+}
+.login-footer p {
+margin: 0.5rem 0;
+}
+.login-footer strong {
+color: var(--color-primary);
+}
